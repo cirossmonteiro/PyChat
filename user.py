@@ -1,6 +1,6 @@
 import socket, sys, time
 
-HOST = "140.82.27.108"
+HOST = "*.*.*.*"
 PORT = 50007
 
 ROOM = "ufrj"
