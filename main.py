@@ -18,7 +18,7 @@ class Connection:
 
     def __checkin_room(self, room, passw, user, ip, port):
         print("main:checkin_room")
-        conn = psy.connect("host=localhost dbname=pychat user=root password=codigo64")
+        conn = psy.connect("host=localhost dbname=pychat user=root password=*")
         cr = conn.cursor()
         cr.execute("select * from rooms where name = '%s';"%(room))
         row = cr.fetchone()
@@ -127,7 +127,7 @@ daily.start()
 """
 def checkin_room(room, passw, user, ip, port):
     print("main:checkin_room")
-    conn = psy.connect("host=localhost dbname=pychat user=root password=codigo64")
+    conn = psy.connect("host=localhost dbname=pychat user=root password=*")
     cr = conn.cursor()
     cr.execute("select * from rooms where name = '%s';")
     row = cr.fetchone()
